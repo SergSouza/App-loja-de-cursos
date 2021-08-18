@@ -3,16 +3,31 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Loja</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <!-- title -->
+  <h1 style="text-align: center;">Sua loja de curso</h1>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will show you the way.
-  </p>
+  <!--card do curso react native -->
+  <!-- *ngfor e nosso laço de repeticao  de criacao de card q a limeta a lista -->
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-card *ngFor="let item of lista" style="margin-top: 40px;">
+    <img [src]="item.imagem" />
+    <ion-card-content>
+      <ion-card-title>
+        {{item.titulo}}
+      </ion-card-title>
+        <p>
+          {{item.descricao}}
+        </p>
+        <div>
+          <button style="padding: 15px;" ion-button color="dark" round>Mais</button>
+          <button style="padding: 10px;" ion-button color="secondary" round>{{item.valor_txt}}</button> 
+        </div>
+  </ion-card-content>
+  </ion-card>
+ 
 </ion-content>
