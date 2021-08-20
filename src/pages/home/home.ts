@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import { DetalhePage } from '../detalhe/detalhe';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -21,14 +22,14 @@ export class HomePage {
           id: "1",
           ordem: "1",
           titulo: "Introducao do curso",
-          video: "https://www.youtube.com/watch?v=Y8tP1jbRYHY",
+          video: "https://www.youtube.com/embed/Y8tP1jbRYHY",
         },
        
         {
           id: "2",
           ordem: "2",
           titulo: "configurando o ambiente",
-          video: "https://www.youtube.com/watch?v=_N6-kScr-Ig&list=RDCMUC44Mzz2-5TpyfklUCQ5NuxQ&index=2",
+          video: "https://www.youtube.com/embed/_N6-kScr-Ig",
         }
         
       ]
@@ -52,6 +53,7 @@ export class HomePage {
 
   abriDetalhe(item){
     this.navCtrl.push(DetalhePage,{dados:item});
+ 
   }
 
 }
