@@ -24,8 +24,8 @@
           {{item.descricao}}
         </p>
         <div>
-          <button style="padding: 15px;" ion-button color="dark" round>Mais</button>
-          <button style="padding: 10px;" ion-button color="secondary" round>{{item.valor_txt}}</button> 
+          <button style='padding: 10px;' ion-button color="dark" round   (click)= "abriDetalhe(item)">Mais</button>
+          <button style='padding: 10px;' ion-button color="secondary" round>{{item.valor_txt}}</button> 
         </div>
   </ion-card-content>
   </ion-card>

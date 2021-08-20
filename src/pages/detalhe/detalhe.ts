@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { AulaPage } from '../aula/aula';
 /**
  * Generated class for the DetalhePage page.
  *
@@ -15,11 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetalhePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  item = {};
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,) {
+
+      this.item = this.navParams.get('dados')  
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DetalhePage');
+  
+  abriAula(item) {
+    this.navCtrl.push(AulaPage,{ dados: item });
   }
+
 
 }

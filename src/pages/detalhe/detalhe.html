@@ -12,4 +12,25 @@
 
 <ion-content padding>
 
+  <ion-card >
+    <ion-card-content >
+
+      <ion-card-title style=font-size:16px;> {{ item.titulo }} </ion-card-title>
+      <p>  {{item.descricao}} </p>
+      <button ion-button block color="secondary" >{{item.valor_txt}}</button>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list >
+    <ion-list-header>
+      Aulas:
+    </ion-list-header>
+    <button ion-item style="font-size: 15px;" *ngFor="let aula of item?.aula" (click)="abriAula(aula)" >
+      {{aula.ordem}} - {{aula.titulo}} 
+    </button>
+    
+  </ion-list>
+
 </ion-content>
